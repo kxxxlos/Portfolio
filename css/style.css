@@ -2,7 +2,9 @@
 html{scroll-behavior: smooth; font-size: 14px;}
 body{background: url('../img/gplaypattern.png'); background-attachment: fixed; background-repeat: repeat;}
 
-.box{margin: 00vh auto; display: flex; justify-content: center; align-content: center; flex-wrap: wrap; flex-direction: column; padding: 6vh 3vw; border: 1px solid #039; max-width: 60vw; box-shadow: 0px 0px 3px #039; border-radius: 10px; background: #fff;}
+.box{margin: 0vh auto; display: flex; justify-content: center; align-content: center; flex-wrap: wrap; flex-direction: column; padding: 6vh 3vw; border: 1px solid #039; max-width: 60vw; box-shadow: 0px 0px 3px #039; border-radius: 10px; background: #fff;}
+
+
 .navbar{width: 100%; display: flex; justify-content: center; position: fixed; top: 0; background-color: #333; z-index: 10; font-size: 1.2rem;}
 .navbar a{padding: 15px 25px; background-color: #333; color: #fff; text-decoration: none; transition: 0.25s ease-out;}
 .navbar a:hover{background-color: #ddd; color: black;}
@@ -20,7 +22,7 @@ header .hero_sub_heding{font-size: 2.2rem; opacity: 0.5; letter-spacing: 3px;}
 .about_me_hobby_box{display: flex; justify-content: space-around; margin: 3vh auto}
 .about_me_hobby{font-size: 2.6rem; text-align: center; color: #039}
 .about_me_hobby p, .skill_box p{font-size: 1.2rem; text-transform: uppercase; font-weight: bold;}
-.about_me_text_box{width: 90%; text-align: justify; hyphens: auto;}
+.about_me_text_box{text-align: justify;}
 .about_me_text_box p{font-size: 1.5rem;}
 .about_me_text_box span{font-size: 2.2rem;}
 .about_me_box > p, .skills_box > p, .portfolio_box_img p, .contact_box p {font-size: 2.2rem; text-align: center; margin-bottom: 5vh;}
@@ -42,14 +44,14 @@ header .hero_sub_heding{font-size: 2.2rem; opacity: 0.5; letter-spacing: 3px;}
 
 /* **************************** SCROLL DOWN ************************* */
 
- .chevron-box{width: 90px; display: flex; justify-content: center; align-self: center; margin: 15vh auto 0;}
- .chevron {position: absolute; width: 28px; height: 8px; opacity: 0; transform: scale3d(0.5, 0.5, 0.5); animation: move 3s ease-out infinite;}
- .chevron:first-child {animation: move 3s ease-out 1s infinite;}
- .chevron:nth-child(2) {animation: move 3s ease-out 2s infinite;}
- .chevron:before,
- .chevron:after {content: ' '; position: absolute; top: 0; height: 100%; width: 51%; background: #039;}
- .chevron:before {left: 0; transform: skew(0deg, 30deg);}
- .chevron:after {right: 0; width: 50%; transform: skew(0deg, -30deg);}
+.chevron-box{width: 90px; display: flex; justify-content: center; align-self: center; margin: 15vh auto 0;}
+.chevron {position: absolute; width: 28px; height: 8px; opacity: 0; transform: scale3d(0.5, 0.5, 0.5); animation: move 3s ease-out infinite;}
+.chevron:first-child {animation: move 3s ease-out 1s infinite;}
+.chevron:nth-child(2) {animation: move 3s ease-out 2s infinite;}
+.chevron:before,
+.chevron:after {content: ' '; position: absolute; top: 0; height: 100%; width: 51%; background: #039;}
+.chevron:before {left: 0; transform: skew(0deg, 30deg);}
+.chevron:after {right: 0; width: 50%; transform: skew(0deg, -30deg);}
  
  @keyframes move {
    25% {opacity: 1;}
@@ -63,3 +65,14 @@ header .hero_sub_heding{font-size: 2.2rem; opacity: 0.5; letter-spacing: 3px;}
  @keyframes pulse {
    to {opacity: 1;}
  }
+
+
+ @media (max-width: 750px) {
+  .box{max-width: 85vw;}
+  .about_me_hobby_box{max-width: 85vw;}
+  .skills_box{margin: 0 auto;}
+  .portfolio_box_img img{max-width: 35vw;}
+}
+@media (max-width: 400px) {
+  html{font-size: 10px;}
+}
